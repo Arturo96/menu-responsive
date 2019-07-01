@@ -1,3 +1,6 @@
+- let items = ['Inicio', 'Quienes Somos', 'Productos', 'Servicios', 'Contacto']
+
+
 <!DOCTYPE html>
 html(lang="en")
     head
@@ -7,3 +10,8 @@ html(lang="en")
         link(rel="stylesheet", href="style.css")
         title Menú responsive
     body
+        header
+            nav.navigation
+                ul.menu
+                    each item in items
+                        li.menu-item= item
