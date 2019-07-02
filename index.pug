@@ -1,4 +1,6 @@
-- let items = ['Inicio', 'Quienes Somos', 'Productos', 'Servicios', 'Contacto']
+- 
+    let items = ['Inicio', 'Quienes Somos', 'Productos', 'Servicios', 'Contacto'],
+        productos = ['Kaspersky', 'ESET', 'BitDefender', 'Sophos']
 
 
 <!DOCTYPE html>
@@ -16,3 +18,9 @@ html(lang="en")
                     each item in items
                         li.menu-item
                             a.menu-link(href="#")= item
+                            if item == "Productos"
+                                ul(class="menu submenu")
+                                    each producto in productos
+                                        li.menu-item
+                                            a.menu-link(href="#")= producto
+

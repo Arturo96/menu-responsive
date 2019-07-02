@@ -23,12 +23,9 @@ body {
 .menu-item {
     flex: auto;
     text-align: center;
-    border-right: 2px solid #fff;
+    position: relative;
 }
 
-.menu-item:last-child {
-    border-right: none;
-}
 
 .menu-link {
     display: block;
@@ -36,29 +33,35 @@ body {
     color: #eee;
     line-height: 3;
     font-family: 'Roboto Condensed', sans-serif;
-
 }
 
 .menu-link:hover {
     color: #311b92;
+    background: #ff7961;
 }
 
 .menu-link:active {
     color: #ffa726;
 }
 
+.submenu {
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+
+.submenu .menu-link:hover {
+    background: #ffca28;
+}
+
+.menu-item:hover .submenu {
+    display: block;
+    background: #ffa726;
+}
+
 @media screen and (max-width: 678px) {
     .menu {
         display: block;
-    }
-
-    .menu-item {
-        border-right: none;
-        border-bottom: 2px solid #fff;
-    }
-
-    .menu-item:last-child {
-        border-bottom: none;
     }
 
 }
